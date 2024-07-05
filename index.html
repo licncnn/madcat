@@ -77,6 +77,11 @@
         color: white;
         padding: 0 48px;
         justify-content: space-between;
+        box-sizing: border-box;
+        width: 100%;
+        position: fixed;
+        z-index: 99;
+        transition: all 0.3s ease-in-out;
       }
 
       .menu .right {
@@ -859,6 +864,7 @@
       </div>
     </div>
     <script>
+      // 移动端菜单
       const body = document.querySelector('body')
       const openNavBtn = document.querySelector('.menu .navbar-toggler')
       const closeNavBtn = document.querySelector('.navbar .navbar-toggler')
@@ -909,6 +915,21 @@
           closeMenu()
         })
       })
+
+
+      // 固定导航
+      const menu = document.querySelector('.top .menu')
+      const menuRect = menu.getBoundingClientRect()
+      const headContainer = document.querySelector('.top .head')
+      headContainer.style.paddingTop = menuRect.height + 'px'
+      window.onscroll = function() {
+        console.log(document.documentElement.scrollTop, menuRect.height);
+        if(document.documentElement.scrollTop >= menuRect.height) {
+          menu.style.backgroundColor='#100416'
+        }else{
+          menu.style.backgroundColor='transparent'
+        }
+      }
     </script>
   </body>
 </html>
