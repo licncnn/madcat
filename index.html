@@ -14,11 +14,6 @@
         font-family: 'MyFont2';
         src: url('./GenSekiGothic-R.ttc') format('truetype');
       }
-      @media screen and (max-width: 1024px) {
-        body {
-          background-color: lightblue;
-        }
-      }
 
       .txt {
         font-family: 'MyFont2', sans-serif;
@@ -44,20 +39,42 @@
       }
 
       body {
-        background-image: url(./熊猫网站底图.png);
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
         color: rgb(191, 206, 157);
-        padding: 32px 48px;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
         gap: 24px;
       }
+      .top{
+        background: url('./熊猫背景网站网页-32.png');
+        background-color: #100416;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        padding-bottom: 30px;
+      }
+
+      .m-menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #100416;
+        padding: 20px 30px;
+        position: sticky;
+        left: 0;
+        top: 0;
+        z-index: 99;
+        display: none;
+      }
+      .m-menu .left img {
+        width: 120px !important;
+        height: unset !important;
+      }
+
       .menu {
         display: flex;
         align-items: center;
         color: white;
+        padding: 0 48px;
         justify-content: space-between;
       }
 
@@ -142,7 +159,7 @@
         height: 80vh;
         display: flex;
         align-items: flex-end;
-        margin-bottom: 124px;
+        padding: 0 48px;
       }
       .head >img{
         display: none;
@@ -180,7 +197,9 @@
         justify-content: space-between;
         gap: 12px;
         height: 60vh;
-        margin-bottom: 124px;
+        background-color: #100416;
+        padding: 0 48px;
+        padding-top: 124px;
       }
 
       .about > img {
@@ -209,7 +228,10 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        margin-bottom: 124px;
+        background-color: #100416;
+        padding: 0 48px;
+        padding-top: 124px;
+        box-sizing: border-box;
       }
       .project .map{
         position: relative;
@@ -272,6 +294,12 @@
         display: flex;
         flex-direction: column;
       }
+      .communtiy{
+        background-color: #100416;
+        padding: 0 48px;
+        padding-top: 124px;
+        box-sizing: border-box;
+      }
 
       .join {
         display: flex;
@@ -283,8 +311,9 @@
         box-sizing: border-box;
         color: black;
         height: 38vh;
-        margin-bottom: 124px;
-        margin-bottom: 30vh;
+        background-color: #100416;
+        padding: 124px 48px;
+        box-sizing: border-box;
       }
       .join .title{
         font-weight: bold;
@@ -329,6 +358,12 @@
         align-items: center;
         gap: 24px;
         height: 180vh;
+        background: url('./熊猫背景网站网页-33.png');
+        background-size: 100% 100%;
+        padding: 124px 48px;
+        padding-bottom: 70px;
+        box-sizing: border-box;
+        position: relative;
       }
 
       .state .title {
@@ -345,7 +380,12 @@
         align-items: flex-end;
         color: rgb(96, 96, 96);
         width: 100%;
-        height: 80vh;
+        height: 60vh;
+        padding: 0 48px;
+        box-sizing: border-box;
+        position: absolute;
+        bottom: 0;
+        left: 0;
       }
 
       .foot .list {
@@ -426,31 +466,22 @@
           margin-bottom: 12px;
         }
         .menu{
-          background-color: #100416;
-          padding: 20px 30px;
-          position: sticky;
-          left: 0;
-          top: 0;
-        }
-        .menu .left img {
-          width: 120px !important;
-          height: unset !important;
-        }
-        .menu .right {
-          /* display: flex;
-          align-items: center;
-          gap: 12px; */
           display: none;
+        }
+        .m-menu{
+          display: flex;
         }
         .navbar-toggler {
           display: block;
         }
-
+        .top{
+          padding-bottom: 0;
+        }
         .head{
           height: unset;
           flex-direction: column;
           background-color: #100416;
-          padding-bottom: 30px;
+          padding: 0px;
           margin-bottom: 0;
         }
         .head >img{
@@ -565,7 +596,7 @@
         }
         .state{
           background-color: #100416;
-          padding: 30px;
+          padding: 0;
           gap: 15px;
           height: unset;
         }
@@ -588,7 +619,7 @@
 
   <body>
     <div class="app">
-      <div class="menu">
+      <div class="m-menu">
         <div class="left">
           <img
             src="./熊猫网站logo.png"
@@ -596,44 +627,59 @@
             style="width: 97px; height: 97px"
           />
         </div>
-        <div class="right">
-          <a class="item" href="#Home">Home</a>
-          <a class="item" href="#About">About</a>
-          <a class="item" href="#Project">Project</a>
-          <a class="item" href="#Community">Community</a>
-          <a class="item" href="#tokenomics">Tokenomics</a>
-        </div>
         <div class="navbar-toggler">
           <span class="navbar-toggler-icon"></span>
         </div>
       </div>
-      <div class="head" id="Home">
-        <img src="./home.jpg" alt="">
-        <div class="txt">
+      <div class="top">
+        <div class="menu">
           <div class="left">
-            <div>The Vow of BadPanda</div>
-            <div>Guardian of the Crypto World</div>
-          </div>
-          <div class="m-left">
-            <div>The Vow of BadPanda</div>
-            <div>Guardian of the </div>
-            <div>Crypto World</div>
+            <img
+              src="./熊猫网站logo.png"
+              alt=""
+              style="width: 97px; height: 97px"
+            />
           </div>
           <div class="right">
-            <!-- <img src="./熊猫网站素材-07.png" alt="" > -->
-            <a href="https://x.com/badpandacoin">
-              <img src="./熊猫网站素材-08.png" alt="" href="" />
-            </a>
-            <a href="https://t.me/BadPandaCoin">
-              <img src="./熊猫网站素材-10.png" alt="" href="" />
-            </a>
-            <!-- <img src="./熊猫网站素材-09.png" alt=""> -->
-
-            <!-- <img src="./熊猫网站素材-11.png" alt=""> -->
+            <a class="item" href="#Home">Home</a>
+            <a class="item" href="#About">About</a>
+            <a class="item" href="#Project">Project</a>
+            <a class="item" href="#Communtiy">Communtiy</a>
+            <a class="item" href="#tokenomics">Tokenomics</a>
+          </div>
+          <div class="navbar-toggler">
+            <span class="navbar-toggler-icon"></span>
           </div>
         </div>
-       
+        <div class="head" id="Home">
+          <img src="./home.jpg" alt="">
+          <div class="txt">
+            <div class="left">
+              <div>The Vow of BadPanda</div>
+              <div>Guardian of the Crypto World</div>
+            </div>
+            <div class="m-left">
+              <div>The Vow of BadPanda</div>
+              <div>Guardian of the </div>
+              <div>Crypto World</div>
+            </div>
+            <div class="right">
+              <!-- <img src="./熊猫网站素材-07.png" alt="" > -->
+              <a href="https://x.com/badpandacoin">
+                <img src="./熊猫网站素材-08.png" alt="" href="" />
+              </a>
+              <a href="https://t.me/BadPandaCoin">
+                <img src="./熊猫网站素材-10.png" alt="" href="" />
+              </a>
+              <!-- <img src="./熊猫网站素材-09.png" alt=""> -->
+  
+              <!-- <img src="./熊猫网站素材-11.png" alt=""> -->
+            </div>
+          </div>
+         
+        </div>
       </div>
+
       <div class="about" id="About">
         <div class="left">
           <span class="title">About</span>
@@ -673,7 +719,7 @@
         </div>
       
       </div>
-      <div class="about" id="Community" style="margin-bottom: 0px">
+      <div class="about communtiy" id="Communtiy" style="margin-bottom: 0px">
         <div class="left">
           <span class="title">Community</span>
           <div class="txt">
@@ -710,77 +756,79 @@
           To protect the crypto world from greed and deception,and to champion
           true builders and innovators.
         </div>
-      </div>
-      <div class="foot">
-        <div class="list">
-          <div class="item">
-            <div class="item-title">OUR CONTACT</div>
-            <div class="item-txt" style="font-size: 28px">
-              BadPandaTeam@gmail.com
-              <br />
+        <div class="foot">
+          <div class="list">
+            <div class="item">
+              <div class="item-title">OUR CONTACT</div>
+              <div class="item-txt" style="font-size: 28px">
+                BadPandaTeam@gmail.com
+                <br />
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-title">ABOTE US</div>
+              <div class="item-txt">
+                Welcome to BadPanda! Join us in the fight against greed and
+                corruption inthe cwypto world, Together, we can build a community
+                that values integrity,innovatiorand true decentralization.Support
+                our mission, buy $BAD, and become part of the crypto revolution
+                with a conscit
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="item-title">FOLLOW US</div>
+              <div class="item-txt">
+                <a href="https://x.com/badpandacoin">
+                  <img src="./熊猫网站素材-08.png" alt="" href="" />
+                </a>
+                <!-- <img src="./熊猫网站素材-07.png" style="width: 48px;" alt=""> -->
+               </div>
             </div>
           </div>
-          <div class="item">
-            <div class="item-title">ABOUT US</div>
-            <div class="item-txt">
-              Welcome to BadPanda! Join us in the fight against greed and
-              corruption in the crypto world, Together, we can build a community
-              that values integrity,innovation, and true decentralization.Support
-              our mission, buy $BAD, and become part of the crypto revolution
-              with a conscience
+        </div>
+        <div class="m-foot">
+          <img src="./foot.jpg" class="banner">
+          <div class="list">
+            <div class="item">
+              <div class="item-title">OUR CONTACT</div>
+              <div class="item-txt">
+                BadPandaTeam@gmail.com
+                <br />
+              </div>
             </div>
-          </div>
-
-          <div class="item">
-            <div class="item-title">FOLLOW US</div>
-            <div class="item-txt">
-              <a href="https://x.com/badpandacoin">
-                <img src="./熊猫网站素材-08.png" alt="" href="" />
-              </a>
-              <!-- <img src="./熊猫网站素材-07.png" style="width: 48px;" alt=""> -->
-             </div>
+            <div class="item">
+              <div class="item-title">ABOTE US</div>
+              <div class="item-txt">
+                Welcome to BadPanda! Join us in the fight against greed and
+                corruption inthe cwypto world, Together, we can build a community
+                that values integrity,innovatiorand true decentralization.Support
+                our mission, buy $BAD, and become part of the crypto revolution
+                with a conscit
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="item-title">SUBSCRIBE</div>
+              <div class="item-txt"></div>
+            </div>
+  
+            <div class="item">
+              <div class="item-title">FOLLOW US</div>
+              <div class="item-img">
+                <a href="https://x.com/badpandacoin">
+                  <img src="./熊猫网站素材-08.png" alt="" href="" />
+                </a>
+                <a href="https://t.me/BadPandaCoin">
+                  <img src="./熊猫网站素材-10.png" alt="" href="" />
+                </a>
+               </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="m-foot">
-        <img src="./foot.jpg" class="banner">
-        <div class="list">
-          <div class="item">
-            <div class="item-title">OUR CONTACT</div>
-            <div class="item-txt">
-              BadPandaTeam@gmail.com
-              <br />
-            </div>
-          </div>
-          <div class="item">
-            <div class="item-title">ABOUT US</div>
-            <div class="item-txt">
-              Welcome to BadPanda! Join us in the fight against greed and
-              corruption inthe crypto world, Together, we can build a community
-              that values integrity,innovation, and true decentralization. Support
-              our mission, buy $BAD, and become part of the crypto revolution
-              with a conscience
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="item-title">SUBSCRIBE</div>
-            <div class="item-txt"></div>
-          </div>
-
-          <div class="item">
-            <div class="item-title">FOLLOW US</div>
-            <div class="item-img">
-              <a href="https://x.com/badpandacoin">
-                <img src="./熊猫网站素材-08.png" alt="" href="" />
-              </a>
-              <a href="https://t.me/BadPandaCoin">
-                <img src="./熊猫网站素材-10.png" alt="" href="" />
-              </a>
-             </div>
-          </div>
-        </div>
-      </div>
+    
+      
     </div>
     <div class="navbar">
       <div class="navbar-mask"></div>
@@ -795,11 +843,11 @@
           <li class="nav-item" name="about">
             <a class="item" href="#About">About</a>
           </li>
-          <li class="nav-item" name="project">
+          <li class="nav-item" name=project">
             <a class="item" href="#Project">Project</a>
           </li>
-          <li class="nav-item" name="Community">
-            <a class="item" href="#Community">Community</a>
+          <li class="nav-item" name="communtiy">
+            <a class="item" href="#Communtiy">Communtiy</a>
           </li>
           <li class="nav-item" name="tokenomics">
             <a class="item" href="#tokenomics">Tokenomics</a>
